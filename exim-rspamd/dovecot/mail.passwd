@@ -1,0 +1,6 @@
+user1:{plain}user1:1001:1001::/home/user1::userdb_mail=maildir:~/Maildir
+user2:{plain}user2:1002:1002::/home/user2::userdb_mail=maildir:~/Maildir
+user3:{plain}user3:1003:1003::/home/user3::userdb_mail=maildir:~/Maildir
+user4:{plain}user4:1004:1004::/home/user4::userdb_mail=maildir:~/Maildir
+user5:{plain}user5:1005:1005::/home/user5::userdb_mail=maildir:~/Maildir
+user6:{plain}user6:1006:1006::/home/user6::userdb_mail=maildir:~/Maildir

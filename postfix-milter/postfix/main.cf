@@ -1,0 +1,34 @@
+readme_directory = no
+
+smtp_host_lookup=native
+
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+
+mydomain = testlab1.test
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain, тестлаб1.тест, xn--1-7sbdo4a9afc.xn--e1aybc
+
+# it might work through tcp
+#mailbox_transport = lmtp:inet:127.0.0.1:24
+# it might work through lda
+mailbox_command = /usr/lib/dovecot/dovecot-lda -f "$SENDER" -a "$RECIPIENT"
+
+inet_interfaces = all
+inet_protocols = ipv4
+
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = inet:127.0.0.1:7777
+
+smtpd_tls_cert_file = /etc/ssl/test2_server6.pem
+smtpd_tls_key_file = /etc/ssl/test2_server6.pem
+smtpd_tls_CAfile = /etc/ssl/test2.pem
+smtpd_tls_security_level = may
+
+smtputf8_enable = yes
+smtputf8_autodetect_classes = all
+
+smtpd_milters = inet:DRWEB_MILTER_IP:DRWEB_MILTER_PORT
+
+anvil_rate_time_unit = 1m
+smtpd_client_message_rate_limit = 10000
